@@ -61,14 +61,13 @@ REPLY_DELAY_SEC    = 4                        # delay before each support reply
 SESSION_FILE   = "otpzudosessions.json"        # userbot sessions
 SETTINGS_FILE  = "otpzudo_settings.json"       # per-account settings
 
-# Groq AI
-API_KEYS = [
-    "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",
-]
+
+API_KEYS = [os.getenv("GROQ_API_KEY")]
+
 OPENROUTER_URL = "https://api.groq.com/openai/v1/chat/completions"
-MODEL        = "llama-3.1-8b-instant"
+MODEL = "llama-3.1-8b-instant"
 VISION_MODEL = "meta-llama/llama-4-scout-17b-16e-instruct"
-MAX_IMAGES   = 5
+MAX_IMAGES = 5
 
 logging.basicConfig(
     level=logging.INFO,
